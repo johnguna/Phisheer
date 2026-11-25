@@ -1,0 +1,19 @@
+app:
+  host: "127.0.0.1"
+  port: 5000
+  secret_key: "development-only-change-me"
+storage:
+  database: "data/alerts.db"
+network:
+  enabled: true
+  suricata_eve_path: "/var/log/suricata/eve.json"
+  poll_seconds: 3
+firewall:
+  enabled: false
+  dry_run: true
+  allowlist:
+    - "127.0.0.1"
+    - "192.168.1.1"
+files:
+  clamav_command: "clamscan"
+  max_file_size_mb: 100
